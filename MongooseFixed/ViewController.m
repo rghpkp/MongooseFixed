@@ -11,7 +11,7 @@
 @interface ViewController ()
 
 @property (nonatomic,assign) int currentRound;
-@property (nonatomic,assign) int maxRound;
+@property (nonatomic,assign) int maxRounds;
 @property (nonatomic,assign) int prepTime;
 
 @property (nonatomic,assign) double startTime;
@@ -56,8 +56,17 @@
 //runButton method- updates labels, calls prepTimer
 - (IBAction)buttonPressed:(id)sender
 {
+    //get rounds from roundField
+    self.maxRounds = [self.roundField.text intValue];
+    NSLog(@"maxRounds = %d", self.maxRounds);
     
+    //get prep time from prepField
+    self.prepTime = [self.prepField.text intValue];
+    NSLog(@"prepTime = %d", self.prepTime);
     
+    //get round time from intervalField
+    self.roundTime = [self.intervalField.text floatValue];
+    NSLog(@"roundTime = %f", self.roundTime);
 }
 
 @end
