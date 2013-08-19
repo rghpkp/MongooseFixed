@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic,assign) int prepTime;
+
 @end
 
 @implementation ViewController
@@ -27,7 +29,7 @@
 }
 
 //executes @ 1s- counts down prep time, calls sleepTimer
-- (void)prepTimeMethod:(NSTimer *)prepTimer
+- (void)prepTimeMethod:(NSTimer *)prepTimer prepTimeArg:(NSInteger)prepTime
 {
     
 }

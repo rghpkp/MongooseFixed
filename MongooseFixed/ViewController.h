@@ -19,7 +19,7 @@
     UITextField *intervalField_;
 }
 
-
+//View Object Properties
 @property (retain,nonatomic) IBOutlet UILabel *timeLabel;
 @property (retain,nonatomic) IBOutlet UILabel *roundLabel;
 @property (retain,nonatomic) NSTimer *sleepTimer;
@@ -28,11 +28,14 @@
 @property (retain,nonatomic) IBOutlet UITextField *prepField;
 @property (retain,nonatomic) IBOutlet UITextField *intervalField;
 
+//Data Variable Properties
+
+
 //runButton method- updates labels, calls prepTimer
 -(IBAction)buttonPressed:(id)sender;
 
 //executes @ 1s- counts down prep time, calls sleepTimer
--(void)prepTimeMethod:(NSTimer*)prepTimer;
+-(void)prepTimeMethod:(NSTimer*)prepTimer prepTimeArg:(NSInteger)prepTime;
 
 //counts via system time, updates labels
 -(void)sleepTimeMethod:(NSTimer*)sleepTimer;
