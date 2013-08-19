@@ -19,4 +19,14 @@
     UITextField *intervalField_;
 }
 
+
+@property (retain,nonatomic) IBOutlet UILabel *timeLabel;
+@property (retain,nonatomic) IBOutlet UILabel *roundLabel;
+@property (retain,nonatomic) NSTimer *sleepTimer;
+@property (retain,nonatomic) NSTimer *prepTimer;
+@property (retain,nonatomic) IBOutlet UITextField *roundField;
+@property (retain,nonatomic) IBOutlet UITextField *prepField;
+@property (retain,nonatomic) IBOutlet UITextField *intervalField;
+
+
 @end
