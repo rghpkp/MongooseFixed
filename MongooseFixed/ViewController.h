@@ -28,5 +28,15 @@
 @property (retain,nonatomic) IBOutlet UITextField *prepField;
 @property (retain,nonatomic) IBOutlet UITextField *intervalField;
 
+//runButton method- updates labels, calls prepTimer
+-(IBAction)buttonPressed:(id)sender;
+
+//executes @ 1s- counts down prep time, calls sleepTimer
+-(void)prepTimeMethod:(NSTimer*)prepTimer;
+
+//counts via system time, updates labels
+-(void)sleepTimeMethod:(NSTimer*)sleepTimer;
+
+
 
 @end

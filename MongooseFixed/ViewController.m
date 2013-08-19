@@ -26,4 +26,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+//executes @ 1s- counts down prep time, calls sleepTimer
+- (void)prepTimeMethod:(NSTimer *)prepTimer
+{
+    
+}
+
+//counts via system time, updates labels
+- (void)sleepTimeMethod:(NSTimer *)sleepTimer
+{
+    
+}
+
+//runButton method- updates labels, calls prepTimer
+- (IBAction)buttonPressed:(id)sender
+{
+    
+}
+
+
 @end
