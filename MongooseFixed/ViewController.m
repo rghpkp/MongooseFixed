@@ -28,6 +28,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.roundField.text = @"3";
+    self.prepField.text = @"4";
+    self.intervalField.text = @"2.5";
+    self.currentRound = 1;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,6 +56,7 @@
 //runButton method- updates labels, calls prepTimer
 - (IBAction)buttonPressed:(id)sender
 {
+    
     
 }
 
