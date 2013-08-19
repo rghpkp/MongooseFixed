@@ -38,7 +38,7 @@
 -(IBAction)buttonPressed:(id)sender;
 
 //executes @ 1s- counts down prep time, calls sleepTimer
--(void)prepTimeMethod:(NSTimer*)prepTimer prepTimeArg:(NSInteger)prepTime;
+-(void)prepTimeMethod:(NSTimer*)prepTimer;
 
 //counts via system time, updates labels
 -(void)sleepTimeMethod:(NSTimer*)sleepTimer;

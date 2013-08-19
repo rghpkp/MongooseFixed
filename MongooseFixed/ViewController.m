@@ -42,13 +42,21 @@
 }
 
 //fires @ 1s- counts down prep time, calls sleepTimer
-- (void)prepTimeMethod:(NSTimer *)prepTimer prepTimeArg:(NSInteger)prepTime
+- (void)prepTimeMethod:(NSTimer *)prepTimer
 {
+    
     //decrement the prepTime by 1s
     self.prepTime--;
     
     //display the new prepTime in the time label
     self.timeLabel.text = [NSString stringWithFormat:@"%d", self.prepTime];
+    
+    if (self.prepTime == 0) {
+        
+        //stop the prepTimer
+        [self.prepTimer invalidate];
+    }
+     
 }
 
 //counts via system time, updates labels
@@ -75,6 +83,11 @@
     
     //display the prepTime in the timeLabel
     self.timeLabel.text = self.prepField.text;
+    
+    //invoke the prepTimer
+    
+    self.prepTimer = [NSTimer scheduledTimerWithTimeInterval:1. target:self selector:@selector(prepTimeMethod:) userInfo:nil repeats:YES];
+    
 }
 
 @end
