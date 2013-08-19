@@ -9,5 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    UILabel *timeLabel_;
+    UILabel *roundLabel_;
+    NSTimer *sleepTimer_;
+    NSTimer *prepTimer_;
+    UITextField *roundField_;
+    UITextField *prepField_;
+    UITextField *intervalField_;
+}
 
 @end
