@@ -5,6 +5,12 @@
 //  Created by Robert Handsfield on 8/18/13.
 //  Copyright (c) 2013 Robert Handsfield. All rights reserved.
 //
+/************************************************************
+ Run button invokes the prepTimer, which counts down the prep
+ time, then calls the sleep timer, which counts down the time
+ for each round and updates the view accordingly.
+************************************************************/
+
 
 #import "ViewController.h"
 
@@ -80,7 +86,7 @@
         if (self.elapsedTime <= self.roundTime) {
             
             //update the clock label w/ the elapsed time
-            self.timeLabel.text = [NSString stringWithFormat:@"%.2f",self.elapsedTime];
+            self.timeLabel.text = [NSString stringWithFormat:@"Time: %.2f",self.elapsedTime];
             
         }
         //if round has ended
