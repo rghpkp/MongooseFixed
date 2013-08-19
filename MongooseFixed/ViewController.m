@@ -10,7 +10,15 @@
 
 @interface ViewController ()
 
+@property (nonatomic,assign) int currentRound;
+@property (nonatomic,assign) int maxRound;
 @property (nonatomic,assign) int prepTime;
+
+@property (nonatomic,assign) double startTime;
+@property (nonatomic,assign) double currentTime;
+@property (nonatomic,assign) double elapsedTime;
+@property (nonatomic,assign) double roundTime;
+
 
 @end
 
