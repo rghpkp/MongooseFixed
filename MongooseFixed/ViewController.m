@@ -41,15 +41,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-//executes @ 1s- counts down prep time, calls sleepTimer
+//fires @ 1s- counts down prep time, calls sleepTimer
 - (void)prepTimeMethod:(NSTimer *)prepTimer prepTimeArg:(NSInteger)prepTime
 {
+    //decrement the prepTime by 1s
+    self.prepTime--;
     
+    //display the new prepTime in the time label
+    self.timeLabel.text = [NSString stringWithFormat:@"%d", self.prepTime];
 }
 
 //counts via system time, updates labels
 - (void)sleepTimeMethod:(NSTimer *)sleepTimer
 {
+    
     
 }
 
@@ -67,6 +72,9 @@
     //get round time from intervalField
     self.roundTime = [self.intervalField.text floatValue];
     NSLog(@"roundTime = %f", self.roundTime);
+    
+    //display the prepTime in the timeLabel
+    self.timeLabel.text = self.prepField.text;
 }
 
 @end
