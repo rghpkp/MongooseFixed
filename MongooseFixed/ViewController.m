@@ -53,13 +53,19 @@
     
     if (self.prepTime == 0) {
         
+        //get the stop watch starting time
+        self.startTime = CACurrentMediaTime();
+        
+        //call the sleepTimer
+        self.sleepTimer = [NSTimer scheduledTimerWithTimeInterval:.005 target:self selector:@selector(sleepTimeMethod:) userInfo:nil repeats:YES];
+        
         //stop the prepTimer
         [self.prepTimer invalidate];
     }
      
 }
 
-//counts via system time, updates labels
+//fires every 5ms, counts via system time, updates labels
 - (void)sleepTimeMethod:(NSTimer *)sleepTimer
 {
     

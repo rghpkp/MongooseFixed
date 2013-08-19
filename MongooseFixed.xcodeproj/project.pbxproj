@@ -23,6 +23,7 @@
 		F1FAB5BE17C1A5E100742AA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FAB59917C1A5E000742AA4 /* Foundation.framework */; };
 		F1FAB5C617C1A5E100742AA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1FAB5C417C1A5E100742AA4 /* InfoPlist.strings */; };
 		F1FAB5C917C1A5E100742AA4 /* MongooseFixedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FAB5C817C1A5E100742AA4 /* MongooseFixedTests.m */; };
+		F1FAB5D317C1D21300742AA4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FAB5D217C1D21300742AA4 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		F1FAB5C517C1A5E100742AA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F1FAB5C717C1A5E100742AA4 /* MongooseFixedTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MongooseFixedTests.h; sourceTree = "<group>"; };
 		F1FAB5C817C1A5E100742AA4 /* MongooseFixedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MongooseFixedTests.m; sourceTree = "<group>"; };
+		F1FAB5D217C1D21300742AA4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1FAB5D317C1D21300742AA4 /* QuartzCore.framework in Frameworks */,
 				F1FAB59817C1A5E000742AA4 /* UIKit.framework in Frameworks */,
 				F1FAB59A17C1A5E000742AA4 /* Foundation.framework in Frameworks */,
 				F1FAB59C17C1A5E000742AA4 /* CoreGraphics.framework in Frameworks */,
@@ -106,6 +109,7 @@
 		F1FAB59617C1A5E000742AA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F1FAB5D217C1D21300742AA4 /* QuartzCore.framework */,
 				F1FAB59717C1A5E000742AA4 /* UIKit.framework */,
 				F1FAB59917C1A5E000742AA4 /* Foundation.framework */,
 				F1FAB59B17C1A5E000742AA4 /* CoreGraphics.framework */,
