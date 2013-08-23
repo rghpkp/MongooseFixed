@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/CAAnimation.h>
 
+
+
 @interface ViewController : UIViewController
 {
     UILabel *timeLabel_;
@@ -37,11 +39,13 @@
 //runButton method- updates labels, calls prepTimer
 -(IBAction)buttonPressed:(id)sender;
 
+-(IBAction)textFieldReturn:(id)sender;
+
 //executes @ 1s- counts down prep time, calls sleepTimer
--(void)prepTimeMethod:(NSTimer*)prepTimer;
+-(void)prepTimeMethod:(NSTimer *)prepTimer;
 
 //counts via system time, updates labels
--(void)sleepTimeMethod:(NSTimer*)sleepTimer;
+-(void)sleepTimeMethod:(NSTimer *)sleepTimer;
 
 
 

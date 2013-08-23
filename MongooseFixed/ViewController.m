@@ -38,13 +38,18 @@
     self.prepField.text = @"4";
     self.intervalField.text = @"2.5";
     self.currentRound = 1;
-    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (IBAction)textFieldReturn:(id)sender
+{
+    [sender resignFirstResponder];
 }
 
 //fires @ 1s- counts down prep time, calls sleepTimer
@@ -106,8 +111,6 @@
         
     }while(self.currentRound >= self.maxRounds+1);
     //not sure why this loop condition must be so complicated to work
-    
-    
 }
 
 //runButton method- updates labels, calls prepTimer
