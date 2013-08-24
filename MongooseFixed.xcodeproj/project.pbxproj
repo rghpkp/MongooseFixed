@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1764B4617C97A2E00AC129A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1764B4517C97A2E00AC129A /* AudioToolbox.framework */; };
 		F1FAB59817C1A5E000742AA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FAB59717C1A5E000742AA4 /* UIKit.framework */; };
 		F1FAB59A17C1A5E000742AA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FAB59917C1A5E000742AA4 /* Foundation.framework */; };
 		F1FAB59C17C1A5E000742AA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FAB59B17C1A5E000742AA4 /* CoreGraphics.framework */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F1764B4517C97A2E00AC129A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F1FAB59417C1A5E000742AA4 /* MongooseFixed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MongooseFixed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FAB59717C1A5E000742AA4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F1FAB59917C1A5E000742AA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,10 +69,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1FAB5D317C1D21300742AA4 /* QuartzCore.framework in Frameworks */,
 				F1FAB59817C1A5E000742AA4 /* UIKit.framework in Frameworks */,
 				F1FAB59A17C1A5E000742AA4 /* Foundation.framework in Frameworks */,
 				F1FAB59C17C1A5E000742AA4 /* CoreGraphics.framework in Frameworks */,
+				F1FAB5D317C1D21300742AA4 /* QuartzCore.framework in Frameworks */,
+				F1764B4617C97A2E00AC129A /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +112,7 @@
 		F1FAB59617C1A5E000742AA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F1764B4517C97A2E00AC129A /* AudioToolbox.framework */,
 				F1FAB5D217C1D21300742AA4 /* QuartzCore.framework */,
 				F1FAB59717C1A5E000742AA4 /* UIKit.framework */,
 				F1FAB59917C1A5E000742AA4 /* Foundation.framework */,
@@ -457,6 +461,7 @@
 				F1FAB5CE17C1A5E100742AA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F1FAB5CF17C1A5E100742AA4 /* Build configuration list for PBXNativeTarget "MongooseFixedTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +470,7 @@
 				F1FAB5D117C1A5E100742AA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
