@@ -131,6 +131,9 @@
     //display the prepTime in the timeLabel
     self.timeLabel.text = [NSString stringWithFormat:@"Time: %@", self.prepField.text];
     
+    //play the sound
+    [self playSoundMethod:@"tick - 1s"];
+    
     //invoke the prepTimer
     
     self.prepTimer = [NSTimer scheduledTimerWithTimeInterval:1. target:self selector:@selector(prepTimeMethod:) userInfo:nil repeats:YES];
