@@ -137,4 +137,16 @@
     
 }
 
+- (IBAction)playSound:(id)sender
+{
+    SystemSoundID soundID;
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"tick - 1s" ofType:@"mp3"];
+
+    NSURL *soundPathURL = [NSURL fileURLWithPath:soundPath];
+    
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef) soundPathURL, &soundID);
+    
+    AudioServicesPlaySystemSound(soundID);
+}
+
 @end
