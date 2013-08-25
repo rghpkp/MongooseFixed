@@ -62,7 +62,14 @@
     //display the new prepTime in the time label
     self.timeLabel.text = [NSString stringWithFormat:@"Time: %d", self.prepTime];
     
-    if (self.prepTime == 0) {
+    //count down last 3 prep seconds w/ tick sound
+    if (self.prepTime < 4 && self.prepTime > 0) {
+
+        //play the tick sound
+        [self playSoundMethod:@"tick - 1s"];
+    }
+        //when prep ends
+    else if (self.prepTime == 0) {
         
         //get the stop watch starting time
         self.startTime = CACurrentMediaTime();
@@ -76,7 +83,8 @@
         //stop the prepTimer
         [self.prepTimer invalidate];
     }
-     
+    
+    
 }
 
 //fires every 5ms, counts via system time, updates labels
@@ -131,25 +139,10 @@
     //display the prepTime in the timeLabel
     self.timeLabel.text = [NSString stringWithFormat:@"Time: %@", self.prepField.text];
     
-    //play the sound
-    [self playSoundMethod:@"tick - 1s"];
-    
     //invoke the prepTimer
     
     self.prepTimer = [NSTimer scheduledTimerWithTimeInterval:1. target:self selector:@selector(prepTimeMethod:) userInfo:nil repeats:YES];
     
-}
-
-- (IBAction)playSound:(id)sender
-{
-    SystemSoundID soundID;
-    NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"tick - 1s" ofType:@"mp3"];
-
-    NSURL *soundPathURL = [NSURL fileURLWithPath:soundPath];
-    
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef) soundPathURL, &soundID);
-    
-    AudioServicesPlaySystemSound(soundID);
 }
 
 - (void)playSoundMethod:(NSString *)soundFileName

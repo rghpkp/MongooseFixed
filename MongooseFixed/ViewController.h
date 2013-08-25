@@ -42,8 +42,6 @@
 
 -(IBAction)textFieldReturn:(id)sender;
 
--(IBAction)playSound:(id)sender;
-
 //executes @ 1s- counts down prep time, calls sleepTimer
 -(void)prepTimeMethod:(NSTimer *)prepTimer;
 
@@ -51,7 +49,6 @@
 -(void)sleepTimeMethod:(NSTimer *)sleepTimer;
 
 -(void)playSoundMethod:(NSString *)soundFileName;
-
 
 
 @end
