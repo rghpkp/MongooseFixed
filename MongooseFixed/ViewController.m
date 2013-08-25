@@ -36,8 +36,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.roundField.text = @"3";
     self.prepField.text = @"4";
-    self.intervalField.text = @"2.5";
-    self.currentRound = 1;
+    self.intervalField.text = @"4.5";
 }
 
 - (void)didReceiveMemoryWarning
@@ -106,6 +105,10 @@
         else {
             //increment the round
             self.currentRound++;
+            NSLog(@"currentRound = %d",self.currentRound);
+            
+            //get a new random interval
+            //here
             
             //reset the elapsed time
             self.elapsedTime = 0;
@@ -114,7 +117,21 @@
             self.startTime = CACurrentMediaTime();
             
             //update the current round label
-            self.roundLabel.text = [NSString stringWithFormat:@"Round: %d / %d",self.currentRound, self.maxRounds];
+            if (self.currentRound <= self.maxRounds) {
+                self.roundLabel.text = [NSString stringWithFormat:@"Round: %d / %d",self.currentRound, self.maxRounds];
+            }
+            
+            
+            //if this is the last round
+            if (self.currentRound >= self.maxRounds+1) {
+                [self playSoundMethod:@"end beep"];
+                [self.sleepTimer invalidate];
+                break;
+            }
+            //if this is not the last round
+            else {
+                [self playSoundMethod:@"beep-7"];
+            }
         }
         
     }while(self.currentRound >= self.maxRounds+1);
@@ -128,6 +145,12 @@
     self.maxRounds = [self.roundField.text intValue];
     NSLog(@"maxRounds = %d", self.maxRounds);
     
+    //set the current round to 1
+    self.currentRound = 1;
+    
+    //update the roundLable
+    self.roundLabel.text = [NSString stringWithFormat:@"Round: %d / %d",self.currentRound, self.maxRounds];
+    
     //get prep time from prepField
     self.prepTime = [self.prepField.text intValue];
     NSLog(@"prepTime = %d", self.prepTime);
@@ -139,8 +162,13 @@
     //display the prepTime in the timeLabel
     self.timeLabel.text = [NSString stringWithFormat:@"Time: %@", self.prepField.text];
     
-    //invoke the prepTimer
+    //initialize elapsed time
+    self.elapsedTime = 0;
     
+    //get a random interval
+    //here
+    
+    //invoke the prepTimer
     self.prepTimer = [NSTimer scheduledTimerWithTimeInterval:1. target:self selector:@selector(prepTimeMethod:) userInfo:nil repeats:YES];
     
 }
