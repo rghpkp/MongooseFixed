@@ -50,6 +50,8 @@
 //counts via system time, updates labels
 -(void)sleepTimeMethod:(NSTimer *)sleepTimer;
 
+-(void)playSoundMethod:(NSString *)soundFileName;
+
 
 
 @end

@@ -149,4 +149,17 @@
     AudioServicesPlaySystemSound(soundID);
 }
 
+- (void)playSoundMethod:(NSString *)soundFileName
+{
+    SystemSoundID soundID;
+    
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:soundFileName ofType:@"mp3"];
+    
+    NSURL *soundPathURL = [NSURL fileURLWithPath:soundPath];
+    
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef) soundPathURL, &soundID);
+    
+    AudioServicesPlaySystemSound(soundID);
+}
+
 @end
