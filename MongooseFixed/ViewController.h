@@ -37,10 +37,12 @@
 //Data Variable Properties
 
 
-//runButton method- updates labels, calls prepTimer
--(IBAction)buttonPressed:(id)sender;
+
 
 -(IBAction)textFieldReturn:(id)sender;
+
+//runButton method- updates labels, calls prepTimer
+-(IBAction)buttonPressed:(id)sender;
 
 //executes @ 1s- counts down prep time, calls sleepTimer
 -(void)prepTimeMethod:(NSTimer *)prepTimer;

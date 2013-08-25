@@ -141,15 +141,17 @@
 //runButton method- updates labels, calls prepTimer
 - (IBAction)buttonPressed:(id)sender
 {
-    //get rounds from roundField
-    self.maxRounds = [self.roundField.text intValue];
-    NSLog(@"maxRounds = %d", self.maxRounds);
+    
     
     //set the current round to 1
     self.currentRound = 1;
     
-    //update the roundLable
-    self.roundLabel.text = [NSString stringWithFormat:@"Round: %d / %d",self.currentRound, self.maxRounds];
+    //initialize elapsed time
+    self.elapsedTime = 0;
+    
+    //get rounds from roundField
+    self.maxRounds = [self.roundField.text intValue];
+    NSLog(@"maxRounds = %d", self.maxRounds);
     
     //get prep time from prepField
     self.prepTime = [self.prepField.text intValue];
@@ -159,11 +161,12 @@
     self.roundTime = [self.intervalField.text floatValue];
     NSLog(@"roundTime = %f", self.roundTime);
     
+    //update the roundLable
+    self.roundLabel.text = [NSString stringWithFormat:@"Round: %d / %d",self.currentRound, self.maxRounds];
+    
     //display the prepTime in the timeLabel
     self.timeLabel.text = [NSString stringWithFormat:@"Time: %@", self.prepField.text];
     
-    //initialize elapsed time
-    self.elapsedTime = 0;
     
     //get a random interval
     //here
