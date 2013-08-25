@@ -96,14 +96,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F1FAB58B17C1A5E000742AA4 = {
+		F1764B4D17C9B94E00AC129A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				F1764B4B17C9B71C00AC129A /* beep-7.mp3 */,
 				F1764B4717C9828700AC129A /* end beep.mp3 */,
 				F1764B4817C9828700AC129A /* tick - 1s.mp3 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F1FAB58B17C1A5E000742AA4 = {
+			isa = PBXGroup;
+			children = (
 				F1FAB59D17C1A5E000742AA4 /* MongooseFixed */,
 				F1FAB5C117C1A5E100742AA4 /* MongooseFixedTests */,
+				F1764B4D17C9B94E00AC129A /* Resources */,
 				F1FAB59617C1A5E000742AA4 /* Frameworks */,
 				F1FAB59517C1A5E000742AA4 /* Products */,
 			);
