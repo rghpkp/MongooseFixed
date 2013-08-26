@@ -20,7 +20,8 @@
     NSTimer *prepTimer_;
     UITextField *roundField_;
     UITextField *prepField_;
-    UITextField *intervalField_;
+    UITextField *minIntervalField_;
+    UITextField *maxIntervalField_;
 }
 
 //View Object Properties
@@ -29,17 +30,12 @@
 
 @property (retain,nonatomic) IBOutlet UITextField *roundField;
 @property (retain,nonatomic) IBOutlet UITextField *prepField;
-@property (retain,nonatomic) IBOutlet UITextField *intervalField;
+@property (retain,nonatomic) IBOutlet UITextField *minIntervalField;
+@property (retain,nonatomic) IBOutlet UITextField *maxIntervalField;
 
 @property (retain,nonatomic) NSTimer *sleepTimer;
 @property (retain,nonatomic) NSTimer *prepTimer;
 
-//Data Variable Properties
-
-
-
-
--(IBAction)textFieldReturn:(id)sender;
 
 //runButton method- updates labels, calls prepTimer
 -(IBAction)buttonPressed:(id)sender;
@@ -52,5 +48,7 @@
 
 -(void)playSoundMethod:(NSString *)soundFileName;
 
+//releases the text field first responder
+-(IBAction)textFieldReturn:(id)sender;
 
 @end

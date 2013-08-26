@@ -24,6 +24,8 @@
 @property (nonatomic,assign) double currentTime;
 @property (nonatomic,assign) double elapsedTime;
 @property (nonatomic,assign) double roundTime;
+@property (nonatomic,assign) double minInterval;
+@property (nonatomic,assign) double maxInterval;
 
 
 @end
@@ -36,7 +38,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.roundField.text = @"3";
     self.prepField.text = @"4";
-    self.intervalField.text = @"2.5";
+    self.minIntervalField.text = @"2.5";
+    self.maxIntervalField.text = @"5";
 }
 
 - (void)didReceiveMemoryWarning
@@ -158,7 +161,7 @@
     NSLog(@"prepTime = %d", self.prepTime);
     
     //get round time from intervalField
-    self.roundTime = [self.intervalField.text floatValue];
+    self.roundTime = 2.5; //[self.intervalField.text floatValue];
     NSLog(@"roundTime = %f", self.roundTime);
     
     //update the roundLable
